@@ -12,6 +12,6 @@ let pokemonList = [
     {
         name: 'Pikachu',
         height: 0.4,
-        type: 'ELECTRIC'
+        type: ['ELECTRIC']
     }
 ];
