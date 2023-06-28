@@ -16,8 +16,11 @@ let pokemonRepository = (function () {
             type: ['ELECTRIC']
         }
     ];
-    function add(Raichu) {
-        pokemonList.push(Raichu);
+    function add(pokemon) {
+
+        if (typeof pokemon === typeof pokemonList) {
+            pokemonList.push(pokemon);
+        }
     }
     function getAll() {
         return pokemonList;
@@ -28,6 +31,12 @@ let pokemonRepository = (function () {
         getAll: getAll
     }
 })();
+
+pokemonRepository.add({
+    name: 'Raichu',
+    height: 0.8,
+    type: ['ELECTRIC']
+})
 
 
 
