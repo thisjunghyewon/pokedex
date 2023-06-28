@@ -16,11 +16,22 @@ let pokemonRepository = (function () {
             type: ['ELECTRIC']
         }
     ];
+    function add(Raichu) {
+        pokemonList.push(Raichu);
+    }
+    function getAll() {
+        return pokemonList;
+    }
+
+    return {
+        add: add,
+        getAll: getAll
+    }
 })();
 
 
 
 function myLoopFunction(list) {
-    document.write('<p>' + list.name + '</p>')
+    document.write('<p>' + list.name + '- height: ' + list.height + ', type: ' + list.type + '</p>')
   }
-pokemonList.forEach(myLoopFunction);
+pokemonRepository.getAll().forEach(myLoopFunction);
