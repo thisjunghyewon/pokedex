@@ -44,3 +44,4 @@ function myLoopFunction(list) {
     document.write('<p>' + list.name + '- height: ' + list.height + ', type: ' + list.type + '</p>')
   }
 pokemonRepository.getAll().forEach(myLoopFunction);
+
