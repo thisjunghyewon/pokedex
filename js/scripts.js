@@ -78,13 +78,6 @@ let pokemonRepository = (function () {
   };
 })();
 
-pokemonRepository.add({
-  name: "Raichu",
-  height: 0.8,
-  type: ["ELECTRIC"],
-});
-
-console.log(pokemonRepository.getAll());
 pokemonRepository.getAll().forEach(function (pokemon) {
   pokemonRepository.addListItem(pokemon);
 });
