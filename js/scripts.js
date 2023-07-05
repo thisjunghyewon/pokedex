@@ -27,10 +27,6 @@ let pokemonRepository = (function () {
     });
   }
 
-  function showDetails(pokemon) {
-    console.log(pokemon.name);
-  }
-
   function loadList() {
     return fetch(apiUrl)
       .then(function (response) {
@@ -66,6 +62,12 @@ let pokemonRepository = (function () {
       .catch(function (e) {
         console.error(e);
       });
+  }
+
+  function showDetails(item) {
+    loadDetails(item).then(function () {
+      console.log(item);
+    });
   }
 
   return {
