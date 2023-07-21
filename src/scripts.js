@@ -128,3 +128,6 @@ pokemonRepository.loadList().then((it) => {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
+//ToDo1: Set the Top button
+//ToDo2: Portfolio link

@@ -1,26 +1,121 @@
+.hidden {
+  display: none;
+}
+
+.loader {
+  text-align: center;
+  color: #1f80e0;
+  margin-top: 100px;
+}
+
+.titleImg {
+  margin: 10px auto 20px;
+}
+
+.search-bar {
+  margin: 0 auto 25px;
+  width: 300px;
+}
+
+.list-group {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding: 0;
+}
+
 .list-group-item {
-  background-color: #ffffff;
+  background-color: #f8f9fa;
   border: none;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.list-group-item:hover,
+.list-group-item:focus,
+.list-group-item:active {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
 .modal-content {
-  background-color: #ecdd3c;
+  text-transform: capitalize;
+  background-color: #d4d4d4;
+  width: 600px;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.modal-title {
+  font-size: 1.25em;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 600px;
+}
+
+.modal p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px;
 }
 
 .btn-primary {
   color: #111;
   width: auto;
-  padding: 10px;
-  text-align: center;
   border: none;
-  background-color: #fdd821;
+  font-weight: 700;
+  line-height: 1.25em;
+  letter-spacing: -0.9px;
+  text-align: center;
+  min-width: 200px;
+  min-height: 175px;
+  text-transform: capitalize;
+  background-color: #ffffff;
+  padding: 0;
+  box-shadow: 2px 2px 2px #666;
+  transform: scale(1);
+  transition: 0.1s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.pokemonHeight {
-  font-size: 20px;
+.btn-primary h1 {
+  width: 100%;
+  font-size: 1.25em;
+  margin: 0;
+  background-color: #cd1313dd;
+  color: #fff;
+  padding: 20px;
 }
 
-.pokemonImg {
-  width: 150px;
-  height: auto;
+@media all and (max-width: 700px) {
+  .modal-body,
+  .modal-content {
+    width: auto;
+  }
+  #modalImage {
+    float: none;
+    width: 150px;
+  }
+
+  @media all and (max-width: 350px) {
+    .modal-body {
+      flex-direction: column-reverse;
+    }
+  }
 }
