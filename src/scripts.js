@@ -131,3 +131,5 @@ pokemonRepository.loadList().then((it) => {
 
 //ToDo1: Set the Top button
 //ToDo2: Portfolio link
+//ToDo3: Logo link
+//ToDo4: Read.md file update

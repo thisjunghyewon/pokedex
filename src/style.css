@@ -1,3 +1,7 @@
+body {
+  background: linear-gradient(rgb(182, 217, 252), rgb(0, 0, 255));
+}
+
 .hidden {
   display: none;
 }
@@ -8,13 +12,28 @@
   margin-top: 100px;
 }
 
+.border {
+  margin: 0 auto 20px;
+  height: 3px;
+  color: #fff;
+  background-color: #fff;
+  opacity: 0.75;
+}
+
+.pokedex {
+  margin: 0 auto;
+}
+
 .titleImg {
-  margin: 10px auto 20px;
+  margin: 55px auto 20px;
+  display: flex;
 }
 
 .search-bar {
   margin: 0 auto 25px;
   width: 300px;
+  text-align: center;
+  border: 1px solid #ff0000;
 }
 
 .list-group {
@@ -23,12 +42,16 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: row;
-  padding: 0;
+  padding: 20px;
+  margin: 20px;
 }
 
 .list-group-item {
-  background-color: #f8f9fa;
+  background: none;
   border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -74,17 +97,11 @@
 }
 
 .btn-primary {
-  color: #111;
   width: auto;
   border: none;
-  font-weight: 700;
-  line-height: 1.25em;
-  letter-spacing: -0.9px;
-  text-align: center;
   min-width: 200px;
   min-height: 175px;
   text-transform: capitalize;
-  background-color: #ffffff;
   padding: 0;
   box-shadow: 2px 2px 2px #666;
   transform: scale(1);
@@ -95,8 +112,11 @@
 }
 
 .btn-primary h1 {
+  font-weight: 500;
+  line-height: 1.25em;
+  text-align: center;
   width: 100%;
-  font-size: 1.25em;
+  font-size: 1.45em;
   margin: 0;
   background-color: #cd1313dd;
   color: #fff;
@@ -114,6 +134,9 @@
   }
 
   @media all and (max-width: 350px) {
+    .pokedex {
+      margin: 55px;
+    }
     .modal-body {
       flex-direction: column-reverse;
     }
